@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "a9e4e106-5f29-4f0d-8bb1-9a870e0cb5ca",
+		"name": "FreeTheBeans (Java)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30649785"
+	},
+	"item": [
+		{
+			"name": "Hello",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Check if response time is less than 200ms\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "bean.phipson.co.za:31415/api/hello",
+					"host": [
+						"bean",
+						"phipson",
+						"co",
+						"za"
+					],
+					"port": "31415",
+					"path": [
+						"api",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ping",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if response status is 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Check if response body is in JSON format\r",
+							"pm.test(\"Response body is JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"// Check if response body contains the expected message\r",
+							"pm.test(\"Response body contains expected message\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"{\\\"message\\\":\\\"pong\\\"}\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "bean.phipson.co.za:31415/api/ping",
+					"host": [
+						"bean",
+						"phipson",
+						"co",
+						"za"
+					],
+					"port": "31415",
+					"path": [
+						"api",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dummy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if response status is 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Check if response body is in JSON format\r",
+							"pm.test(\"Response body is JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"// // Check if response body contains the expected message\r",
+							"// pm.test(\"Response body contains expected message\", function () {\r",
+							"//     pm.expect(pm.response.text()).to.include(\"{\\\"message\\\":\\\"pong\\\"}\");\r",
+							"// });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "bean.phipson.co.za:31415/api/dummy",
+					"host": [
+						"bean",
+						"phipson",
+						"co",
+						"za"
+					],
+					"port": "31415",
+					"path": [
+						"api",
+						"dummy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get State Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if response status is 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Check if response body is in JSON format\r",
+							"pm.test(\"Response body is JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"// // Check if response body contains the expected message\r",
+							"// pm.test(\"Response body contains expected message\", function () {\r",
+							"//     pm.expect(pm.response.text()).to.include(\"{\\\"message\\\":\\\"pong\\\"}\");\r",
+							"// });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "bean.phipson.co.za:31415/api/state/dummyState",
+					"host": [
+						"bean",
+						"phipson",
+						"co",
+						"za"
+					],
+					"port": "31415",
+					"path": [
+						"api",
+						"state",
+						"dummyState"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

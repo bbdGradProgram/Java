@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: sql\DDL\states.sql
+  - include:
+      file: sql\DDL\players.sql
+  - include:
+      file: sql\DML\dummy.sql
+  - include:
+      file: sql\DML\state_information.sql
